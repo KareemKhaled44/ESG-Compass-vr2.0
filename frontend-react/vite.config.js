@@ -8,7 +8,8 @@ export default defineConfig({
   build: {
     outDir: "../backend/staticfiles/dist", // Build directly into Django's staticfiles
     emptyOutDir: true,
-    assetsDir: 'assets',  // Explicit assets directory
+    assetsDir: "assets", // Explicit assets directory
+    manifest: true,
   },
   server: {
     port: 8080,
