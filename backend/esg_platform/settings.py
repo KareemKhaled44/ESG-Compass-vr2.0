@@ -74,7 +74,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'frontend-react/dist',
+            '../frontend-react/dist',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
