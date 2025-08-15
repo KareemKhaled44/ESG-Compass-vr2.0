@@ -88,6 +88,13 @@ TEMPLATES = [
     },
 ]
 
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend-react' / 'dist' / 'assets',
+]
+
 WSGI_APPLICATION = 'esg_platform.wsgi.application'
 
 # Database
@@ -123,12 +130,7 @@ TIME_ZONE = 'Asia/Dubai'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [
-    BASE_DIR / 'frontend-react' / 'dist' / 'static',
-]
+
 
 # Media files
 MEDIA_URL = '/media/'
