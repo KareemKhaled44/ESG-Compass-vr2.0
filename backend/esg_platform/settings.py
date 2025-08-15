@@ -74,7 +74,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            '../frontend-react/dist',
+            '../frontend-react/dist',  # Ensure this points to the correct build directory
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -90,9 +90,9 @@ TEMPLATES = [
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    BASE_DIR / 'frontend-react' / 'dist' / 'assets',
+    os.path.join(BASE_DIR, '..', 'frontend-react', 'dist'),  # Point to dist, not dist/assets
 ]
 
 WSGI_APPLICATION = 'esg_platform.wsgi.application'
