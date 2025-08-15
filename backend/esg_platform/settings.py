@@ -69,13 +69,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'esg_platform.urls'
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'frontend-react' / 'dist',  # 👈 React build output folder
+            'frontend-react/dist',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
-    BASE_DIR / 'frontend-react' / 'dist' / 'assets',
+    BASE_DIR / 'frontend-react' / 'dist' / 'static',
 ]
 
 # Media files
