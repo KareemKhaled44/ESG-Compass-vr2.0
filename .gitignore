@@ -1,0 +1,13 @@
+node_modules/
+venv*/
+txt_to_pdf_env/
+*.log
+*.pid
+__pycache__/
+*.pyc
+dist/
+.env
+.vscode/
+*.sqlite3-journal
+database_backups/
+media/generated_reports/*.pdf
