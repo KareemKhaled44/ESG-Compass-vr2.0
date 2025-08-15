@@ -4,10 +4,11 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/static/", // Make sure this is set to '/'
+  base: "/static/", // Ensure this matches your Django static URL
   build: {
-    outDir: "dist", // Ensure this is `dist`
+    outDir: "../backend/staticfiles/dist", // Build directly into Django's staticfiles
     emptyOutDir: true,
+    assetsDir: 'assets',  // Explicit assets directory
   },
   server: {
     port: 8080,
