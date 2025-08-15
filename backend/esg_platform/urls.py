@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from apps.dashboard.views import test_social_dashboard
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     
@@ -22,12 +23,12 @@ urlpatterns = [
     path('api/reports/', include('apps.reports.urls')),
     path('api/dashboard/', include('apps.dashboard.urls')),
     path('api/users/', include('apps.user_management.urls')),
-    
     # Serve frontend files - React app
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     
     # This catch-all must come AFTER any static file-serving rules.
     re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
+
 ]
 
 # This should be handled by whitenoise, but it's a good practice for development.
